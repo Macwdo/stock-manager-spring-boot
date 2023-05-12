@@ -1,13 +1,15 @@
 package br.com.gordao.service;
 
 import br.com.gordao.entity.Product;
-import br.com.gordao.entity.Sale;
 import br.com.gordao.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Streamable;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class ProductService {
@@ -19,4 +21,22 @@ public class ProductService {
         Iterable<Product> productIterable = this.productRepository.findAll();
         return Streamable.of(productIterable).stream().toList();
     }
+
+    public Product createProduct(Product product){
+        this.productRepository.save(product);
+        return product;
+    }
+
+    public void deleteProduct(UUID id){
+        this.productRepository.deleteById(id);
+    }
+
+    public Product getProduct(UUID id){
+        return this.productRepository.findById(id).get();
+    }
+
+    public Product editProduct(UUID id, Product product){
+        return this.productRepository.save(product);
+    }
+
 }

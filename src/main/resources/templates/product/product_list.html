@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+  <h1>
+    Products
+  </h1>
+    <div>
+        <ul data-th-each="product: ${productList}" >
+            <li data-th-text="${product.id}" ></li>
+            <li data-th-text="${product.name}" ></li>
+
+        </ul>
+    </div>
+</body>
+</html>

@@ -5,18 +5,32 @@
     <title>Registrar Produto</title>
 </head>
 <body>
-  <form>
-    <label>Nome do Produto</label>
-    <input type="text" name="" id="product_name">
-    <label>Valor do Produto</label>
-    <input type="text" name="" id="product_value">
-    <label>Custo do Produto</label>
-    <input type="text" name="" id="product_coust">
-    <label>Quantidade</label>
-    <input type="text" name="" id="product_quantity">
-    <button type="submit"></button>
+<div>
 
-  </form>
+  <div>
+    <h1>
+      Criar Novo Produto
+    </h1>
+  <div th:if="${message}" th:text="${message}" >
+
+  </div>
+  </div>
+
+  <div>
+    <form action="/product/new" method="POST" >
+      <label>Nome do Produto</label>
+      <input type="text" name="name" id="name">
+      <label>Valor do Produto</label>
+      <input type="text" name="value" id="value">
+      <label>Custo do Produto</label>
+      <input type="text" name="coust" id="coust">
+      <label>Quantidade</label>
+      <input type="text" name="stockQuantity" id="stockQuantity">
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
 
 </body>
 </html>
