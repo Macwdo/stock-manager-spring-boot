@@ -3,8 +3,6 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
-import java.util.UUID;
-
 @Table(name = "product")
 @Entity(name = "product")
 @Getter
@@ -16,8 +14,8 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", updatable = false, unique = true, nullable = false)
-    private UUID id;
+    @Column(name = "product_id", updatable = false, unique = true, nullable = false)
+    private Long id;
 
     @NotBlank
     @Column(name = "name")
@@ -26,16 +24,16 @@ public class Product {
     @Column(name = "value")
     private Float value;
 
-    @Column(name = "coust")
-    private Float coust;
+    @Column(name = "cost")
+    private Float cost;
 
     @Column(name = "stockQuantity")
     private int stockQuantity;
 
-    public Product(String name, Float value, Float coust, int stockQuantity) {
+    public Product(String name, Float value, Float cost, int stockQuantity) {
         this.name = name;
         this.value = value;
-        this.coust = coust;
+        this.cost = cost;
         this.stockQuantity = stockQuantity;
     }
 }
