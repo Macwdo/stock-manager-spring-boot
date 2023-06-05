@@ -1,0 +1,5 @@
+/home/macwdo/codes/gordao/src/main/java/br/com/gordao/entity/Product.java
+/home/macwdo/codes/gordao/src/main/java/br/com/gordao/repository/ProductRepository.java
+/home/macwdo/codes/gordao/src/main/java/br/com/gordao/GordaoApplication.java
+/home/macwdo/codes/gordao/src/main/java/br/com/gordao/controller/ProductController.java
+/home/macwdo/codes/gordao/src/main/java/br/com/gordao/service/ProductService.java

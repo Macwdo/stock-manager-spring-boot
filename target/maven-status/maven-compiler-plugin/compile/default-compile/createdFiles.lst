@@ -1,0 +1,5 @@
+br/com/gordao/entity/Product.class
+br/com/gordao/service/ProductService.class
+br/com/gordao/repository/ProductRepository.class
+br/com/gordao/controller/ProductController.class
+br/com/gordao/GordaoApplication.class
